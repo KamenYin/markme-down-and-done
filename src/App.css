@@ -1,21 +1,43 @@
   @import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Kanit&family=Nunito&display=swap');
 
-body{
+  *{
+    margin:0;
+    padding:0;
+  }
+
+#root{
   background-color: rgb(220, 181, 235);
+  
 }
+
+.header{
+  margin:40px auto;
+  padding:auto;
+}
+
+
+
   h1{
     -webkit-text-stroke: 2px indigo;
     color:rgb(198, 160, 226);
     font-family: 'Dela Gothic One', cursive;
     text-align: center;
+    padding: auto 15px;
+    margin: 10px 25px 40px 25px;
+  
+    
 
   }
 
+  
 .boxes-container {
   display: flex;
   flex-direction: column;
-  margin:40px auto auto auto;
-  width:90%;
+  margin:40px auto;
+  justify-content: center;
+  align-items: center;
+  width:100%;
+  
 
 }
 
@@ -29,13 +51,32 @@ body{
   background-color: rgb(194, 128, 240);
   resize: none;
   border-radius: 10px;
-  padding: 10px 40px 10px 10px;
+  padding: 20px 40px 10px 10px;
   box-sizing: content-box; 
   margin: 40px auto;
  
 
    
 }
+
+#preview{
+  width: 80%;
+  height:70vh;
+  margin:40px auto;
+  font-family: 'Nunito', sans-serif;
+  font-size:16px;
+  line-height: 2em;
+  background-color: rgb(210, 134, 239);
+  padding: 40px;
+  overflow: auto;
+  border-radius: 25px;  
+}
+
+img{
+  width: 100%;
+  
+}
+
 
 .scrollme {
   scrollbar-width: thin;
@@ -65,24 +106,13 @@ body{
 }
 
 
-#preview{
-  width: 80%;
-  height:80%;
-  margin:40px auto;
-  font-size:18px;
-  background-color: rgb(210, 134, 239);
-  padding: 40px;
-  overflow: auto;
-  border-radius: 25px;  
-}
-
-img{
-  width: 100%;
-  
-}
 
 @media screen and (min-width: 768px)
+
+
  {
+
+  
   .boxes-container{
     flex-direction: row;
     width: 80%
@@ -99,4 +129,37 @@ img{
     height: 80vh;
     margin: 0px 0px 0px 30px;
   }
+
+
+ 
+}
+@media  (max-width: 767px){
+#root{
+  background-color: rgb(220, 181, 235);
+}
+
+  .boxes-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    
+  }
+
+  #editor {
+    width: 70%;
+    height:60vh;
+    margin: 30px auto;
+    
+  }
+
+  #preview{
+    width:80%;
+    height: 80vh;
+    margin: 30px auto;
+  }
+
+
+
 }
